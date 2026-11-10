@@ -1,16 +1,80 @@
 # Portfolio agent
 
-A portfolio page with a chat box. Visitors ask questions and an AI agent answers from your CV. A Cloudflare Worker sits in between, so your OpenRouter key never reaches the browser.
+A template for a portfolio page with an AI agent. Visitors ask the agent about you. The agent answers from your CV.
 
 Live example: https://alvee1994.github.io/portfolio/
+
+# For humans
+
+## What this is
+
+- A public web page about you. GitHub hosts the page at no cost.
+- A chat box on the page. An AI agent answers the questions of your visitors.
+- The agent uses only the text that you give it: your CV and your notes.
+- The agent refuses all other topics.
+
+You do not write code. An AI coding assistant on your laptop does the build. You make the accounts, write about yourself, and approve the steps.
+
+## What you need
+
+- A laptop (Mac or Windows).
+- Your CV.
+- A payment card for $5 of OpenRouter credit. This is the only cost. GitHub and Cloudflare are free.
+- One AI coding assistant: Claude Code, Codex, or Antigravity. Antigravity is free.
+- Approximately 2 hours. Most of this time is for the text about yourself.
+
+## How to use it
+
+Do these steps in the sequence shown. [GUIDE.md](GUIDE.md) gives each step in full, with pictures. [GUIDE.pdf](GUIDE.pdf) is the same guide for print.
+
+1. **Make three accounts:** GitHub, Cloudflare, and OpenRouter. (Guide step 1)
+2. **Install one AI assistant** and connect it to Cloudflare. (Guide steps 2 to 4)
+3. **Write about yourself.** Put your CV and your notes in a file with the name `prompt.txt`. Keep this file in your Documents folder. Do not put a phone number or a home address in it. (Guide step 5)
+4. **Set up OpenRouter.** Add $5 of credit. Set all Zero Data Retention switches to on. Make an API key with a $5 credit limit. (Guide step 6)
+5. **Copy this template.** Click **Use this template** at the top of this page. Then click **Create a new repository**. Use the name `portfolio`. Set the visibility to **Public**. (Guide step 7.1)
+6. **Start your assistant** in your Documents folder. Paste this text:
+
+   > Clone my GitHub repository called portfolio into this folder. Then read AGENTS.md in it and follow it to build my portfolio. My prompt.txt is in my Documents folder. Use the OpenRouter model openai/gpt-6-luna.
+
+7. **Do what the assistant asks.** It opens a file for your OpenRouter key. Paste the key into the file, then save the file. Do not paste the key into the chat. Read each step before you approve it.
+8. **Open your page:** `https://<your-username>.github.io/portfolio/`. Click **Ask my agent**. Ask a question about your work.
+
+## What you can do after the build
+
+Ask your assistant to make the change. For example:
+
+- "Change the headline on my page."
+- "Add my new job to the page and to the agent's knowledge."
+- "Use a different model."
+
+You can also stop the agent at any time. Delete the key on OpenRouter. The page stays online, and the chat stops. The guide tells you how to remove everything ("Pause or clean up").
+
+## Is it safe?
+
+- **Your cost has a limit.** The $5 credit limit on your key is the hard stop. Do not remove it.
+- **Your key stays secret.** It is on Cloudflare and in one file on your laptop. It does not go to GitHub or to the browser of a visitor.
+- **Your notes stay out of GitHub.** Your repository is public, but `prompt.txt` and your CV are not in it.
+- **A visitor can ask the agent about all the text that you give it.** Do not give it private data.
+- **The model providers do not keep the conversations.** The Worker permits only zero data retention providers.
+- **A bot check and a rate limit decrease misuse.** They cannot stop all misuse. The credit limit can.
+
+## If something breaks
+
+Paste the full error into your assistant. Ask: "What went wrong and how do I fix it?" The table in [GUIDE.md](GUIDE.md) ("If something breaks") shows the common errors.
+
+---
+
+# For agents
+
+Everything below is for the AI coding assistant, and for people who do the build by hand.
+
+**If you are a coding agent:** read [AGENTS.md](AGENTS.md) first and follow its order of work. It has the ground rules (what must never be committed, where the key goes). The sections below are the technical reference: architecture, manual steps, privacy, security and troubleshooting.
 
 ```
 Visitor -> GitHub Pages (this page) -> Cloudflare Worker -> OpenRouter -> model (zero data retention providers only)
 ```
 
-**New here? Follow [GUIDE.md](GUIDE.md)** (printable: [GUIDE.pdf](GUIDE.pdf)). It covers accounts, OpenRouter credit, privacy settings, the API key, choosing a model, and lets your AI assistant do the build. This README is the technical reference.
-
-**Using Claude Code, Codex or Antigravity?** Open this folder and say: "Read AGENTS.md and help me build my portfolio."
+A Cloudflare Worker sits between the page and OpenRouter, so the OpenRouter key never reaches the browser.
 
 ## What is in here
 
