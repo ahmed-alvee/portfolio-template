@@ -16,7 +16,7 @@ simple = { limit = 5, period = 60 }
 [[ratelimits]]
 name = "MSG_LIMIT"
 namespace_id = "1006"
-simple = { limit = 20, period = 60 }  # one call per message, no polling
+simple = { limit = 6, period = 60 }  # one call per message, no polling. A person sends 2 or 3 a minute
 
 # Secrets (never in this file): OPENROUTER_API_KEY, TURNSTILE_SECRET, SIGNING_SECRET.
 # They live in .dev.vars (gitignored) and go up with: npx wrangler deploy --secrets-file .dev.vars
