@@ -2,7 +2,7 @@
 
 Your CV can now answer questions. This template gives you a portfolio page with an AI agent that talks about your work, day and night.
 
-👉 See a live one: https://alvee1994.github.io/portfolio/
+👉 See a live one: https://ahmed-alvee.github.io/portfolio/
 
 # For humans
 
@@ -98,7 +98,7 @@ workers/test-chat.mjs          checks the Worker against the real OpenRouter API
 
 Your assistant does these for you (see AGENTS.md). By hand:
 
-1. **Copy.** `gh repo create portfolio --template alvee1994/portfolio-template --public --clone`, then `cd portfolio`.
+1. **Copy.** `gh repo create portfolio --template ahmed-alvee/portfolio-template --public --clone`, then `cd portfolio`.
 2. **Knowledge.** `cp workers/profile.example.txt workers/profile.txt`, keep the rules, add your name, CV and notes. It is gitignored.
 3. **Turnstile.** dash.cloudflare.com > Turnstile > Add widget. Hostname `<github-username>.github.io`, mode Managed. Keep the sitekey and the secret.
 4. **Secrets.** In `workers/openrouter/`, create `.dev.vars` (gitignored):

@@ -4,7 +4,7 @@ You get a public portfolio page with an AI agent built in. Visitors ask it about
 
 **Prefer to print or read offline?** The same steps are in [GUIDE.pdf](GUIDE.pdf).
 
-**Example:** [alvee1994.github.io/portfolio](https://alvee1994.github.io/portfolio). Yours will look like this, with your own agent in the corner.
+**Example:** [ahmed-alvee.github.io/portfolio](https://ahmed-alvee.github.io/portfolio). Yours will look like this, with your own agent in the corner.
 
 **Time:** about 2 hours. Most of it is step 5, writing about yourself.
 
@@ -256,7 +256,7 @@ Prices change. The table on the Models page has today's numbers.
 
 Your page needs its own repo on your GitHub account. You copy it from the template in two clicks.
 
-1. Open [github.com/alvee1994/portfolio-template](https://github.com/alvee1994/portfolio-template) while logged in to GitHub.
+1. Open [github.com/ahmed-alvee/portfolio-template](https://github.com/ahmed-alvee/portfolio-template) while logged in to GitHub.
 2. Click the green **Use this template** button at the top right, then **Create a new repository**.
 
    ![The Use this template button opened, with Create a new repository highlighted](docs/github-use-template.png)

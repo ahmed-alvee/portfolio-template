@@ -14,7 +14,7 @@ concurrency:
 jobs:
   deploy:
     # Skip on the template itself; runs in your copy.
-    if: github.repository != 'alvee1994/portfolio-template'
+    if: github.repository != 'ahmed-alvee/portfolio-template'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

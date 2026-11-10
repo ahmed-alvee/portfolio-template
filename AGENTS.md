@@ -11,7 +11,7 @@ The student-facing walkthrough is GUIDE.md. README.md has the architecture, secu
 - The student's OpenRouter key goes only into `workers/openrouter/.dev.vars` (gitignored), which the student fills in themselves. Never ask for the key in the chat. Never print, cat or read `.dev.vars` after the student has edited it.
 - You create the other secrets yourself (`SIGNING_SECRET`, `TURNSTILE_SECRET`). Never send the student to the Cloudflare dashboard for something the Cloudflare MCP can do.
 - `config.js` is public. Only the Worker URL, the Turnstile sitekey and the greeting go there.
-- Every id in the repo is a placeholder. Create the student's own in their own accounts. Never reuse ids from alvee1994.github.io or invent one.
+- Every id in the repo is a placeholder. Create the student's own in their own accounts. Never reuse ids from ahmed-alvee.github.io or invent one.
 - Keep the ids `ask`, `launch` and `panel` in `index.html`, and keep the Content-Security-Policy meta tag.
 - Insert text with `textContent`, never `innerHTML`.
 - Do not touch `app.js` or the Worker code unless the student asks.
@@ -46,7 +46,7 @@ gh repo view portfolio --json name,visibility,url
 - **It exists:** clone it with `gh repo clone portfolio` and move into it. If it is private, explain that the page must be public for visitors to reach it, ask, then `gh repo edit portfolio --visibility public --accept-visibility-change-consequences`.
 - **It does not exist:** create it from the template, after telling the student:
   ```
-  gh repo create portfolio --template alvee1994/portfolio-template --public --clone
+  gh repo create portfolio --template ahmed-alvee/portfolio-template --public --clone
   ```
 - **They used another name:** use that name everywhere below. The page is then at `https://<username>.github.io/<repo name>/`. `ALLOWED_ORIGIN` stays `https://<username>.github.io`.
 
